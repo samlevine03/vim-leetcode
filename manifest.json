@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "LeetCode Vim Mode",
+    "version": "1.0",
+    "description": "Enables Vim keybindings in LeetCode's code editor.",
+    "permissions": ["scripting"],
+    "content_scripts": [
+      {
+        "matches": ["https://leetcode.com/*"],
+        "js": ["content.js"],
+        "run_at": "document_end"
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": ["inject.js"],
+        "matches": ["https://leetcode.com/*"]
+      }
+    ]
+  }
+  
